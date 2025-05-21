@@ -1,9 +1,7 @@
 import axios from 'axios';
 
 // Base API URL - This is configured via proxy in package.json for development
-const API_URL = process.env.NODE_ENV === 'production' 
-  ? '/api'  // In production, this will be relative to the server
-  : '/api'; // In development, this will be proxied to localhost:5000/api
+const API_URL = 'https://fsdbackend-rdjx.onrender.com/'; // In development, this will be proxied to localhost:5000/api
 
 const api = axios.create({
   baseURL: API_URL,
